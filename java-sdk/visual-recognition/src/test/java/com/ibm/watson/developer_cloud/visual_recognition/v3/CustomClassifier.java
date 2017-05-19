@@ -14,7 +14,8 @@ import com.ibm.watson.developer_cloud.visual_recognition.v3.model.VisualClassifi
 import com.ibm.watson.developer_cloud.visual_recognition.v3.model.ClassifierOptions.Builder;
 
 public class CustomClassifier {
-	
+
+	public static boolean isZipMade = false;  
 
 	
 	
@@ -48,9 +49,8 @@ public class CustomClassifier {
 		 
 		 thread_zipmaker.setName("zip maker thread");
 		 thread_zipmaker.start();
-		 thread_zipmaker.join();
 		 
-		 Thread.sleep(5000);
+		 //Thread.sleep(5000);
 		 
 		 // custom classifer make thread
 		 Thread thread_classifier = new Thread(new Runnable() {
@@ -58,6 +58,7 @@ public class CustomClassifier {
 				@Override
 				public void run() {
 					 // filters zip files and add it to allZipPath 
+					while(thread_zipmaker.getState()==Thread.State.WAITING){}
 					List<File> allZipPath = new ArrayList<File>();
 					for(int i=0; i<allFolderOrFiles.size();i++)
 					{
