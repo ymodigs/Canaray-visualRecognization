@@ -13,6 +13,9 @@ import com.ibm.watson.developer_cloud.visual_recognition.v3.model.ClassifierOpti
 import com.ibm.watson.developer_cloud.visual_recognition.v3.model.VisualClassifier;
 import com.ibm.watson.developer_cloud.visual_recognition.v3.model.ClassifierOptions.Builder;
 
+
+
+
 public class CustomClassifier {
 
 	public static boolean isZipMade = false;  
