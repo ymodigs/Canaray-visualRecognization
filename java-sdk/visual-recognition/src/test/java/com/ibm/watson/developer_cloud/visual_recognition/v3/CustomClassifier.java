@@ -8,8 +8,9 @@ import java.util.Arrays;
 import java.util.List;
 
 import com.ibm.watson.developer_cloud.visual_recognition.canaray.ClassifierMaker;
+import com.ibm.watson.developer_cloud.visual_recognition.canaray.DataTagsImageURLs;
 import com.ibm.watson.developer_cloud.visual_recognition.canaray.GetJsonFromURL;
-import com.ibm.watson.developer_cloud.visual_recognition.canaray.ImageFileDownloader;
+import com.ibm.watson.developer_cloud.visual_recognition.canaray.ParseJson;
 import com.ibm.watson.developer_cloud.visual_recognition.canaray.ZipMaker;
 import com.ibm.watson.developer_cloud.visual_recognition.v3.model.ClassifierOptions;
 import com.ibm.watson.developer_cloud.visual_recognition.v3.model.VisualClassifier;
@@ -34,13 +35,15 @@ public class CustomClassifier {
 		String jsonURL = br.readLine();
 		
 		String gotJsonData = new GetJsonFromURL().GetJsonFromURL(jsonURL);
-		System.out.print("From URL, we got: \n" + gotJsonData);
+			
 		
+//		for (DataTagsImageURLs t : new ParseJson().doJsonParsing(gotJsonData)) {
+//			System.out.println(t.toString());
+//		}
 		
-		System.out.print("Passing string to parse \n" + new ImageFileDownloader().ImageFileDownloader(gotJsonData));
+		new FileDownloader(new ParseJson().doJsonParsing(gotJsonData),"C:\\Users\\specsy\\Desktop\\demo\\");
 		
-		
-		
+		System.out.println("I am done with downloading");
 		/*String path = br.readLine();
 		File f = new File(path);
 		
