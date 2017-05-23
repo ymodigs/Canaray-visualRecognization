@@ -1,5 +1,6 @@
 package com.ibm.watson.developer_cloud.visual_recognition.canaray;
 
+
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
