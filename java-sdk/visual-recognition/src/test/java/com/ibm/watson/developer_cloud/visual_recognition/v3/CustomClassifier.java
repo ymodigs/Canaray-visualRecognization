@@ -8,6 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import com.ibm.watson.developer_cloud.visual_recognition.canaray.ClassifierMaker;
+import com.ibm.watson.developer_cloud.visual_recognition.canaray.GetJsonFromURL;
 import com.ibm.watson.developer_cloud.visual_recognition.canaray.ZipMaker;
 import com.ibm.watson.developer_cloud.visual_recognition.v3.model.ClassifierOptions;
 import com.ibm.watson.developer_cloud.visual_recognition.v3.model.VisualClassifier;
@@ -27,8 +28,14 @@ public class CustomClassifier {
 		
 		
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-		System.out.print("Enter the path:");
-		String path = br.readLine();
+		//System.out.print("Enter the path:");
+		System.out.print("Enter the json URL:");
+		String jsonURL = br.readLine();
+		
+		String gotJsonData = new GetJsonFromURL().GetJsonFromURL(jsonURL);
+		System.out.print("From URL, we got: \n" + gotJsonData);
+		
+		/*String path = br.readLine();
 		File f = new File(path);
 		
 		ArrayList<File> allFolderOrFiles = new ArrayList<File>(Arrays.asList(f.listFiles()));
@@ -52,11 +59,11 @@ public class CustomClassifier {
 		 
 		 thread_zipmaker.setName("zip maker thread");
 		 thread_zipmaker.start();
-		 
+		 */
 		 //Thread.sleep(5000);
 		 
 		 // custom classifer make thread
-		 Thread thread_classifier = new Thread(new Runnable() {
+		 /*Thread thread_classifier = new Thread(new Runnable() {
 
 				@Override
 				public void run() {
@@ -88,6 +95,6 @@ public class CustomClassifier {
 		 thread_classifier.start();
 		 
 		 
-		
+		*/
 	}	
 }

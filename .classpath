@@ -46,5 +46,6 @@
 	<classpathentry kind="lib" path="java-sdk/gradle/wrapper/gradle-wrapper.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/examples_retrieve-and-rank-solrj"/>
+	<classpathentry kind="lib" path="C:/Users/specsy/Downloads/json-20170516.jar"/>
 	<classpathentry kind="output" path="java-sdk/bin"/>
 </classpath>
