@@ -9,6 +9,7 @@ import java.util.List;
 
 import com.ibm.watson.developer_cloud.visual_recognition.canaray.ClassifierMaker;
 import com.ibm.watson.developer_cloud.visual_recognition.canaray.GetJsonFromURL;
+import com.ibm.watson.developer_cloud.visual_recognition.canaray.ImageFileDownloader;
 import com.ibm.watson.developer_cloud.visual_recognition.canaray.ZipMaker;
 import com.ibm.watson.developer_cloud.visual_recognition.v3.model.ClassifierOptions;
 import com.ibm.watson.developer_cloud.visual_recognition.v3.model.VisualClassifier;
@@ -34,6 +35,11 @@ public class CustomClassifier {
 		
 		String gotJsonData = new GetJsonFromURL().GetJsonFromURL(jsonURL);
 		System.out.print("From URL, we got: \n" + gotJsonData);
+		
+		
+		System.out.print("Passing string to parse \n" + new ImageFileDownloader().ImageFileDownloader(gotJsonData));
+		
+		
 		
 		/*String path = br.readLine();
 		File f = new File(path);

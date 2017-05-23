@@ -12,10 +12,8 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-/* get the json data from URL 
- * Parse the json data
- * 
- * 
+/*  
+ * get the json data from URL
  * */
 public class GetJsonFromURL {
 	
@@ -55,14 +53,21 @@ public class GetJsonFromURL {
 			return null;
 		}
 		
-		//Convert string to object
-		/*try{
-			
+		//Convert string to object	
+		/*try{	
 			jsonObject = new JSONObject(result);
+			
+
 		} catch(JSONException e){
 			return null;
 		}*/
 		
+		
+//		String key = "";
+//		
+//		System.out.println(jsonObject.);
+////				getString("Clear left maxillary sinus"));
+//		System.out.println(jsonObject);
 //		System.out.println(result);
 		return result;
 		
