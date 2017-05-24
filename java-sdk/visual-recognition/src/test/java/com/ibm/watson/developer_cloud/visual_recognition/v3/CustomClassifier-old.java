@@ -19,16 +19,16 @@ import com.ibm.watson.developer_cloud.visual_recognition.v3.model.ClassifierOpti
 
 
 
-public class CustomClassifier {
+// public class CustomClassifier {
 
-	public static boolean isZipMade = false;  
+// 	public static boolean isZipMade = false;  
 
 	
 	
-	public static void main(String args[]) throws Exception
-	{
+// 	public static void main(String args[]) throws Exception
+// 	{
 		
-		
+		/*
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 		//System.out.print("Enter the path:");
 		System.out.print("Enter the json URL:");
